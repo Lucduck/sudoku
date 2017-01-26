@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <title>SUDOKU</title>
@@ -20,6 +20,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
 
   <?php 
+  console.log("hola")
     if(isset($_POST['ficha'])){
   ?>
   <script>
