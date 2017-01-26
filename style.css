@@ -42,6 +42,7 @@ form button{
 .block button{
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 50px;
 }
 #fichas{
   opacity: 0;
