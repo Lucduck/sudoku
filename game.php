@@ -1,6 +1,9 @@
 <html lang="es">
 
 <head>
+  <?php 
+    header("Content-Type: application/javascript; charset=UTF-8");
+  ?>
   <title>SUDOKU</title>
   <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
 
