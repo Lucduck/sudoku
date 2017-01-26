@@ -1,0 +1,219 @@
+body {
+  background: url() no-repeat fixed;
+  background-size: 100% 100%;
+  line-height: 1.8em;
+  color: #333;
+}
+
+/* Give headings their own font */
+/*
+h1, h2, h3, h4 {
+}
+*/
+/* Main content area */
+ 
+  
+#content {
+  position: absolute;
+  left: calc(50% - (480px / 2));
+  top: 50px;
+  /*top: calc(50% - (600px / 2));*/
+  text-align: center;
+}
+ 
+/* Header/footer boxes */
+/*
+.wideBox {
+  clear: both;
+  text-align: center;
+  margin: 70px;
+  padding: 10px;
+  background: #ebedf2;
+  border: 1px solid #333;
+}
+ 
+.wideBox h1 {
+  font-weight: bold;
+  margin: 20px;
+  color: #666;
+  font-size: 1.5em;
+}
+*/
+#cardSlots, #cardPile {
+  height: 480px;
+  /*padding: 20px;*/
+  /*border: 2px solid #333;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);*/
+}
+/* Slots for final card positions */
+ 
+#cardSlots {
+  width: 480px;
+  
+  position : absolute;
+  top : 0;
+  left : 0;
+  
+}
+.cosa{
+  height: 480px;
+}
+.fondoSudoku{
+  position : absolute;
+  top : 0;
+  left : 0;
+  width: 480px;
+  height: 480px;
+  
+}
+.lineas{
+  /*visibility: hidden;*/
+  position : absolute;
+  top: -2px;
+  left: -2px;
+  border-collapse: collapse;
+  border: 6px solid black;
+  /*background: rgba(90, 222, 208, 0.7);*/
+}
+.lineas tr th{
+  width: 117px;
+  height: 115px;
+  border: 2px dashed black;
+  padding : 0px;
+}
+.lineas tr th:nth-child(even){
+  border-right: 4px solid black;
+}
+.lineas tr:nth-child(even) th{
+  border-bottom: 4px solid black;
+}
+ 
+/* The initial pile of unsorted cards */
+ 
+#cardPile {
+  height: 120px;
+  width: 480px;
+  margin-top: 60px;
+  position: relative;
+  /*border: 2px solid #261945;
+  background: rgba(90, 222, 208, 0.7);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;*/
+}
+ 
+ 
+/* Individual cards and slots */
+.madera{
+  position : absolute;
+  top: -75px;
+  left: -20px;
+  height: 200px;
+  width: 520px;
+  z-index: -2;
+}
+.maderas{
+  position : absolute;
+  top: 0px;
+  left: -60px;
+  height: 480px;
+  width: 600px;
+  z-index: -1;
+}
+.maderas1{
+  top: 0px;
+  left: 0px;
+  height: 480px;
+  width: 480px;
+}
+.maderas2{
+  /*
+  top: -55px;
+  left: -60px;
+  height: 610px;
+  width: 610px;
+  */
+  top: -58px;
+  left: -37px;
+  height: 630px;
+  width: 545px;
+}
+.cua{
+  position : absolute;
+  /*top: 200px;*/
+}
+
+
+#cardSlots div, #cardPile div, .fondo{
+  float: left;
+  width: 91px;
+  height: 91px;
+  border: 10px solid rgba(255,255,255, 0);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  margin: 4px;
+  /*background: rgba(225, 207, 169, 0);*/
+  background: url() no-repeat;
+  background-size: 91px 91px;
+}
+.fondo{
+  /*margin: 10px;*/
+}
+ /*
+#cardSlots div:first-child, #cardPile div:first-child {
+  margin-left: 0;
+}*/
+ 
+#cardSlots div.hovered {
+  
+}
+ 
+#cardSlots div {
+ /* border-style: dashed;*/
+}
+ 
+#cardPile div {
+  color: #fff;
+  font-size: 50px;
+  text-shadow: 0 0 3px #000;
+  border-color: rgba(245, 226, 115, 1);
+}
+ 
+#cardPile div.ui-draggable-dragging, #cardSlots div.ui-draggable-dragging {
+  -moz-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  -webkit-box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
+  z-index: 50;
+}
+ 
+/* Individually coloured cards */
+/*
+#card1.correct { background: red; }
+#card2.correct { background: brown; }
+#card3.correct { background: orange; }
+#card4.correct { background: yellow; }
+#card5.correct { background: green; }
+#card6.correct { background: cyan; }
+#card7.correct { background: blue; }
+#card8.correct { background: indigo; }
+#card9.correct { background: purple; }
+#card10.correct { background: violet; }
+*/
+
+#basura{
+  width: 200px;
+  height: 200px;
+  background-image: url('assets/sudoku2/basura1.png');
+  background-size: 200px;
+  position: absolute;
+  left: 140px
+}
+#basura.hovered {
+  background-image: url('assets/sudoku2/basura2.png');
+}
