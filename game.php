@@ -15,26 +15,6 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 
-  <!-- PARA MOVILES TACTILES -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
-
-  <?php 
-  console.log("hola")
-    if(isset($_POST['ficha'])){
-  ?>
-  <script>
-      var ruta_fichas = <?php echo $_POST['ficha'];?>;
-  </script>
-  <?php
-    }else{
-  ?>
-  <script>
-      var ruta_fichas = 'assets/sudoku2/';
-  </script>
-  <?php
-    }
-  ?>
-
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" type="text/css" href="game.css">
   <script src="tableros.js"></script>
