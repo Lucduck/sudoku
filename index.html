@@ -32,27 +32,17 @@
     <button class="butonBlue" onclick="options()">PLAY</button>
     <div id="fichas">
       <h2>Choose a drawing:</h2>
-      <form action="game.php" method="post">
-        <button type="submit" class="butonBlue" name="ficha" value="'assets/sudoku0/'"> <img src="assets/sudoku0/logo.png"/> </button>
-        <button type="submit" class="butonBlue" name="ficha" value="'assets/sudoku1/'"> <img src="assets/sudoku1/logo.png"/> </button>
-        <button type="submit" class="butonBlue" name="ficha" value="'assets/sudoku2/'"> <img src="assets/sudoku2/logo.png"/> </button>
-        <button type="submit" class="butonBlue" name="ficha" value="'assets/sudoku3/'"> <img src="assets/sudoku3/logo.png"/> </button>
-        <button type="submit" class="butonBlue" name="ficha" value="'assets/sudoku6/'"> <img src="assets/sudoku6/logo.png"/> </button>
-        <button type="submit" class="butonBlue" name="ficha" value="'assets/sudoku8/'"> <img src="assets/sudoku8/logo.png"/> </button>
+      <form action="game.html" method="get">
+        <button type="submit" class="butonBlue" name="ficha" value="assets/sudoku0/"> <img src="assets/sudoku0/logo.png"/> </button>
+        <button type="submit" class="butonBlue" name="ficha" value="assets/sudoku1/"> <img src="assets/sudoku1/logo.png"/> </button>
+        <button type="submit" class="butonBlue" name="ficha" value="assets/sudoku2/"> <img src="assets/sudoku2/logo.png"/> </button>
+        <button type="submit" class="butonBlue" name="ficha" value="assets/sudoku3/"> <img src="assets/sudoku3/logo.png"/> </button>
+        <button type="submit" class="butonBlue" name="ficha" value="assets/sudoku6/"> <img src="assets/sudoku6/logo.png"/> </button>
+        <button type="submit" class="butonBlue" name="ficha" value="assets/sudoku8/"> <img src="assets/sudoku8/logo.png"/> </button>
       </form>
     </div>
   </div>
-
-  <!-- GANAR -->
-  <!-- 
-  <div class="Message" id="successMessage">
-    <h1>CONGRATULATIONS!!!</h1>
-    <h1>IS FINISHED</h1>
-    <button class="butonBlue" onclick="init()">Play Again</button>
-    <br/>
-    <button class="buttonRed" onclick="">Menu</button>
-  </div>
-   -->
+  
   <script>
     $('#fichas').hide()
     options = function () {
