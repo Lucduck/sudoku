@@ -42,7 +42,6 @@ form button{
 .block button{
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 50px;
 }
 #fichas{
   opacity: 0;
@@ -86,7 +85,7 @@ button{
   -moz-border-radius: 5px;
   border-radius: 5px;
   border: 0;
-  font-size: 30px;
+  font-size: 50px;
   padding: 15px 30px;
   line-height: 1.8em;
   cursor: pointer;
