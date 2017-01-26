@@ -37,13 +37,13 @@ form button{
         margin-top: 300px;
     }
 }
-@media only screen and (max-height: 750px) {
+@media only screen and (max-height: 900px) {
     .block{
         margin: 10px;
         margin-top: 150px;
     }
 }
-@media only screen and (max-height: 580px) {
+@media only screen and (max-height: 600px) {
     .block{
         margin: 10px;
     }
