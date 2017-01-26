@@ -71,11 +71,13 @@ form button{
   font-size: 27px;
   line-height: 2.5em;
   transition: all 0.5s;
-}
-#cargando{
   position: fixed;
 }
-
+@media only screen and (max-height: 850px) {
+    #successMessage{
+        padding-top: 50px;
+    }
+}
 button{
   text-align:center;
   text-decoration: none;
