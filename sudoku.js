@@ -106,6 +106,7 @@ function handleCardDrop (event, ui) {
     a.draggable('enable')
     a.data('dropped', b.data('number')).draggable({
       containment: '#content',
+      stack: '#cardPile div',
       cursor: 'pointer',
       revert: true,
       revertDuration: 0
