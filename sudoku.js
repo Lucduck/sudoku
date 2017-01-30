@@ -65,6 +65,7 @@ function init () {
         emptyCards--
       }
       $('<div></div>').data('number', tablero[i][j]).data('dropped', '0').appendTo('#cardSlots').css('background-image', 'url("' + imatge + '")').css('border-color', borderColor).droppable({
+        containment: '#content',
         accept: '#cardPile div',
         hoverClass: 'hovered',
         drop: handleCardDrop
@@ -80,16 +81,17 @@ function init () {
 }
 
 function eliminar (event, ui) {
+  var a = $(event.target)
   var b = $(event.toElement)
   b.css('background-image', '')
   b.css('border-color', 'rgba(245, 226, 115, 0)')
   b.draggable('disable')
-  b.droppable('enable')
   b.data('dropped', 0).droppable({
     accept: '#cardPile div',
     hoverClass: 'hovered',
     drop: handleCardDrop
   })
+  b.droppable('enable')
   emptyCards++
 }
 
@@ -103,13 +105,13 @@ function handleCardDrop (event, ui) {
     a.css('background-image', 'url("' + ruta_fichas + cardNumber + '.png' + '")')
     a.css('border-color', 'rgba(245, 226, 115, 1)')
     a.droppable('disable')
-    a.draggable('enable')
     a.data('dropped', b.data('number')).draggable({
       containment: '#content',
       cursor: 'pointer',
       revert: true,
       revertDuration: 0
     })
+    a.draggable('enable')
     emptyCards--
   }
 
