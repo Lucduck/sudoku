@@ -73,8 +73,11 @@ form button{
   transition: all 0.5s;
   position: fixed;
 }
+    #wrongMessage{
+        padding-top: 100px;
+    }
 @media only screen and (max-height: 850px) {
-    #successMessage{
+    #successMessage, #wrongMessage{
         padding-top: 50px;
     }
 }
@@ -92,10 +95,18 @@ button{
   line-height: 1.8em;
   cursor: pointer;
 }
-.butonBlue{
+.buttonGreen{
+  background: #2ECC71;
+}
+
+.buttonGreen:hover{
+  background: #27AE60;
+}
+
+.buttonBlue{
   background: #3498DB;
 }
-.butonBlue:hover{
+.buttonBlue:hover{
   background: #2980B9;
 }
 .buttonRed{

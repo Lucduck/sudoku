@@ -81,8 +81,19 @@
   <div class="Message" id="successMessage">
     <h1>CONGRATULATIONS!!!</h1>
     <h1>IS FINISHED</h1>
-    <button class="butonBlue" onclick="init()">Play Again</button>
+    <button class="buttonBlue" onclick="init()">Play Again</button>
     <br/>
+    <button class="buttonRed" onclick="window.location='index.html'">Menu</button>
+  </div>
+
+  <!-- PERDER -->
+  <div class="Message" id="wrongMessage">
+    <h1>OH NOES!</h1>
+    <h1>Try again</h1>
+    <button class="buttonGreen" onclick="hidemessage('#wrongMessage')">Continue</button>
+    <br>
+    <button class="buttonBlue" onclick="init()">Play Again</button>
+    <br>
     <button class="buttonRed" onclick="window.location='index.html'">Menu</button>
   </div>
 </body>

@@ -11,6 +11,14 @@ var tablero_inferior = 'assets/Wooden_Sign.png'
 
 $(init)
 
+function hidemessage (message) {
+  $(message).hide()
+  $(message).animate({
+    height: '0',
+    opacity: 0
+  })
+}
+
 function init () {
   $('body').css('background-image', 'url(' + ruta_fichas + 'background.png)')
 
@@ -24,11 +32,8 @@ function init () {
   var tablero = RotarArray(tableros[a])
 
   // Hide the success message
-  $('#successMessage').hide()
-  $('#successMessage').animate({
-    height: '0',
-    opacity: 0
-  })
+  hidemessage('#successMessage')
+  hidemessage('#wrongMessage')
 
   // Reset the game
   correctCards = 0
@@ -133,6 +138,12 @@ function handleCardDrop (event, ui) {
     if (correcte) {
       $('#successMessage').show()
       $('#successMessage').animate({
+        height: '100%',
+        opacity: 1
+      })
+    }else{
+      $('#wrongMessage').show()
+      $('#wrongMessage').animate({
         height: '100%',
         opacity: 1
       })
