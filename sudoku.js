@@ -136,12 +136,14 @@ function handleCardDrop (event, ui) {
     //console.log(correcte)
     // EJECUTA SI ESTA TODO CORRECTO
     if (correcte) {
+      console.log("h")
       $('#successMessage').show()
       $('#successMessage').animate({
         height: '100%',
         opacity: 1
       })
-    }else{
+    } else {
+      console.log("h")
       $('#wrongMessage').show()
       $('#wrongMessage').animate({
         height: '100%',
