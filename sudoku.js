@@ -12,7 +12,7 @@ var tablero_inferior = 'assets/Wooden_Sign.png'
 $(init)
 
 function init () {
-  $('body').css('background-image', 'url(' + fondo_juego + ')')
+  $('body').css('background-image', 'url(' + ruta_fichas + 'background.png)')
 
 
 
