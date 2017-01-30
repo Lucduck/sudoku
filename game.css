@@ -218,7 +218,7 @@ h1, h2, h3, h4 {
   background-image: url('assets/sudoku2/basura2.png');
 }
 
-@media only screen and (max-height: 870px) {
+@media only screen and (max-height: 800px) {
   #content {
     width: 720px;
     height: 660px;
