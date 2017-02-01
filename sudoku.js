@@ -28,8 +28,9 @@ function init () {
   emptyCards = 16
 
   // coger tablero aleatorio, y con la funcion Rotar Array, girar las posiciones para que sea mas aleatorio
-  var a = Math.floor((Math.random() * tableros.length))
-  var tablero = RotarArray(tableros[a])
+  console.log(nivel)
+  var a = Math.floor((Math.random() * tableros[nivel].length))
+  var tablero = RotarArray(tableros[nivel][a])
 
   // Hide the success message
   hidemessage('#successMessage')

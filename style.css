@@ -48,11 +48,29 @@ form button{
 }
 
 
-
-
-
-
-
+form > input{
+  /*visibility: hidden;*/
+  opacity: 0;
+  position: absolute;
+  width: 168px;
+  height: 168px;
+  margin-top: 20px;
+  cursor:pointer;
+}
+form > input + img{
+  cursor:pointer;
+  border: 4px solid transparent;
+  width: 100px;
+  height: 130px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 15px 30px;
+  margin-top: 20px;
+}
+form > input:checked + img{
+  border:4px solid #2980B9;
+}
 
 
 .Message {
