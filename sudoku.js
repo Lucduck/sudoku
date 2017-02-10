@@ -8,7 +8,7 @@ var fondo_juego = 'assets/IMG_3565.png'
 var tablero_fondo = 'assets/wood-planks-texture.jpg'
 var tablero_border = 'assets/wood_border.png'
 var tablero_inferior = 'assets/Wooden_Sign.png'
-
+var clicado = false
 $(init)
 
 function hidemessage (message) {
@@ -18,17 +18,27 @@ function hidemessage (message) {
     opacity: 0
   })
 }
+function stopRefresh () {
+  $('.fa-refresh').attr('class', 'fa fa-refresh fa-stack-1x fa-inverse')
+  init()
+  clicado = false
+}
+function refresh () {
+  if (!clicado) {
+    clicado = true
+    $('.fa-refresh').attr('class', 'fa fa-refresh fa-stack-1x fa-inverse fa-spin fa-fw')
+
+    setTimeout(stopRefresh, 950)
+  }
+}
 
 function init () {
   $('body').css('background-image', 'url(' + ruta_fichas + 'background.png)')
-
-
 
   correctCards = 0
   emptyCards = 16
 
   // coger tablero aleatorio, y con la funcion Rotar Array, girar las posiciones para que sea mas aleatorio
-  console.log(nivel)
   var a = Math.floor((Math.random() * tableros[nivel].length))
   var tablero = RotarArray(tableros[nivel][a])
 
@@ -50,7 +60,7 @@ function init () {
 
   for ( var i = 0; i < numbers.length; i++) {
     var imatge = ruta_fichas + numbers[i] + '.png'
-    $('<div></div>').attr('class', 'cua').css('left', 119 * i + 'px').data('number', numbers[i]).attr('id', 'card' + numbers[i]).appendTo('#cardPile').css('background-image', 'url("' + imatge + '")').draggable({
+    $('<div></div>').attr('class', 'card').css('left', 119 * i + 'px').data('number', numbers[i]).attr('id', 'card' + numbers[i]).appendTo('#cardPile').css('background-image', 'url("' + imatge + '")').draggable({
       containment: '#content',
       stack: '#cardPile div',
       cursor: 'pointer',
@@ -133,8 +143,6 @@ function handleCardDrop (event, ui) {
         }
       }
     }
-    //console.log('correcte')
-    //console.log(correcte)
     // EJECUTA SI ESTA TODO CORRECTO
     if (correcte) {
       $('#successMessage').show()

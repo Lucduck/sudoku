@@ -55,14 +55,6 @@
   </div>
   <!-- CONTENIDO -->
   <div id="content">
-    <div class="cosa"></div>
-    <div class="fondoSudoku">
-      <script>
-        for(var i = 0; i < 16; i++){
-          document.write('<div class="fondo"></div>');
-        }
-      </script>
-    </div>
     <table class="lineas">
       <script>
         for(var i = 0; i < 4; i++){
@@ -76,6 +68,18 @@
     </table>
     <div id="cardSlots"></div>
     <div id="cardPile"></div>
+    <div onclick="refresh()" class="refresh">
+      <span class="fa-stack fa-lg fa-4x">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-refresh fa-stack-1x fa-inverse"></i>
+      </span>
+    </div>
+    <div onclick="window.location='index.html'" class="home">
+      <span class="fa-stack fa-lg fa-4x">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-home fa-stack-1x fa-inverse "></i>
+      </span>
+    </div>
     <div id="basura"></div>
   </div>
 

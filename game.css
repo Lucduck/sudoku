@@ -4,85 +4,36 @@ body {
   line-height: 1.8em;
   color: #333;
 }
-
-/* Give headings their own font */
-/*
-h1, h2, h3, h4 {
-}
-*/
-/* Main content area */
- 
-  
 #content {
-  
-  position: absolute;
-  left: calc(50% - (480px / 2));
-  top: 50px;
-  /*top: calc(50% - (600px / 2));*/
-  text-align: center;
+  align-self: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  margin-top: 50px;
 }
- 
-/* Header/footer boxes */
-/*
-.wideBox {
-  clear: both;
-  text-align: center;
-  margin: 70px;
-  padding: 10px;
-  background: #ebedf2;
-  border: 1px solid #333;
-}
- 
-.wideBox h1 {
-  font-weight: bold;
-  margin: 20px;
-  color: #666;
-  font-size: 1.5em;
-}
-*/
 #cardSlots, #cardPile {
   height: 480px;
-  /*padding: 20px;*/
-  /*border: 2px solid #333;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-  -webkit-box-shadow: 0 0 .3em rgba(0, 0, 0, .8);
-  box-shadow: 0 0 .3em rgba(0, 0, 0, .8);*/
-}
-/* Slots for final card positions */
- 
-#cardSlots {
   width: 480px;
-  
-  position : absolute;
-  top : 0;
-  left : 0;
-  
 }
-.cosa{
-  height: 480px;
-}
+
 .fondoSudoku{
   position : absolute;
   top : 0;
   left : 0;
   width: 480px;
   height: 480px;
-  
 }
 .lineas{
-  /*visibility: hidden;*/
   position : absolute;
   top: -2px;
   left: -2px;
   border-collapse: collapse;
   border: 6px solid black;
-  /*background: rgba(90, 222, 208, 0.7);*/
 }
 .lineas tr th{
-  width: 117px;
+  width: 115px;
   height: 115px;
   border: 2px dashed black;
   padding : 0px;
@@ -94,22 +45,15 @@ h1, h2, h3, h4 {
   border-bottom: 4px solid black;
 }
  
-/* The initial pile of unsorted cards */
  
 #cardPile {
   height: 120px;
   width: 480px;
   margin-top: 60px;
   position: relative;
-  /*border: 2px solid #261945;
-  background: rgba(90, 222, 208, 0.7);
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;*/
 }
  
  
-/* Individual cards and slots */
 .madera{
   position : absolute;
   top: -75px;
@@ -133,20 +77,13 @@ h1, h2, h3, h4 {
   width: 480px;
 }
 .maderas2{
-  /*
-  top: -55px;
-  left: -60px;
-  height: 610px;
-  width: 610px;
-  */
   top: -58px;
   left: -37px;
   height: 630px;
   width: 545px;
 }
-.cua{
+.card{
   position : absolute;
-  /*top: 200px;*/
 }
 
 
@@ -159,30 +96,10 @@ h1, h2, h3, h4 {
   -webkit-border-radius: 10px;
   border-radius: 10px;
   margin: 4px;
-  /*background: rgba(225, 207, 169, 0);*/
   background: url() no-repeat;
   background-size: 91px 91px;
 }
-.fondo{
-  /*margin: 10px;*/
-}
- /*
-#cardSlots div:first-child, #cardPile div:first-child {
-  margin-left: 0;
-}*/
- 
-#cardSlots div.hovered {
-  
-}
- 
-#cardSlots div {
- /* border-style: dashed;*/
-}
- 
 #cardPile div {
-  color: #fff;
-  font-size: 50px;
-  text-shadow: 0 0 3px #000;
   border-color: rgba(245, 226, 115, 1);
 }
  
@@ -192,45 +109,61 @@ h1, h2, h3, h4 {
   box-shadow: 0 0 .5em rgba(0, 0, 0, .8);
   z-index: 50;
 }
- 
-/* Individually coloured cards */
-/*
-#card1.correct { background: red; }
-#card2.correct { background: brown; }
-#card3.correct { background: orange; }
-#card4.correct { background: yellow; }
-#card5.correct { background: green; }
-#card6.correct { background: cyan; }
-#card7.correct { background: blue; }
-#card8.correct { background: indigo; }
-#card9.correct { background: purple; }
-#card10.correct { background: violet; }
-*/
-
 #basura{
   width: 200px;
   height: 200px;
   background-image: url('assets/sudoku2/basura1.png');
   background-size: 200px;
-  margin: 0 140px;
+  align-self: auto;
 }
 #basura.hovered {
   background-image: url('assets/sudoku2/basura2.png');
 }
 
+.home, .refresh{
+  position: absolute;
+  bottom: 20px;
+  cursor: pointer;
+  border-radius: 300px;
+  background: rgb(52,152,219);
+}
+.home{
+  right: 0;
+}
+.refresh{
+  left: 0;
+}
+.home span i:first-child, .refresh span i:first-child{
+  color: rgb(52,152,219);
+}
+.home span:hover i:first-child, .refresh span:hover i:first-child{
+  color: rgb(41,128,185);
+}
+.fa-spin {
+    animation: fa-spin 1s infinite linear !important;
+}
 @media only screen and (max-height: 800px) {
   #content {
     width: 720px;
     height: 660px;
   }
-  .lineas tr th{
-    width: 115px;
+  #cardSlots, #cardPile {
+    margin-left: -240px;
   }
+
   #basura{
     position: absolute;
     left: auto;
     right: 0;
     bottom: 0;
     margin: 0;
+  }
+  .home, .refresh{
+    right: 40px;
+    bottom: auto;
+    left: auto;
+  }
+  .home{
+    top: 80px;
   }
 }

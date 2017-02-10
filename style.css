@@ -11,6 +11,9 @@ body, html{
 body{
   text-align:center;
   background-image: url('assets/fondo.png');
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 button img{
@@ -23,13 +26,8 @@ button img{
   border: 10px solid rgb(100, 80, 146);
   border-radius: 20px;
   padding: 20px;
-  margin: 10px 100px;
   transition: all 0.5s;
-}
-@media only screen and (max-width: 760px) {
-    .block{
-        margin: 10px;
-    }
+  max-width: 1200px;
 }
 .block h1{
     font-size: 100px;
@@ -45,7 +43,6 @@ button img{
 
 form > input{
   visibility: hidden;
-  position: absolute;
 }
 form > input + img{
   cursor:pointer;
@@ -105,7 +102,6 @@ input[name=ficha] + label >img {
     }
 }
 button{
-  text-align:center;
   text-decoration: none;
   margin-top: 50px;
   color: #FFF;
