@@ -29,35 +29,39 @@
   <!-- MENU -->
   <div class="block">
     <h1>SUDOKU</h1>
-    <button class="buttonBlue" onclick="options()">PLAY</button>
-    <div id="options">
-      <form action="game.html" method="get">
-        <h2>Choose a level:</h2>
-        <input type="radio" name="level" value="0" checked><img src="assets/nue/c1.png"/>
-        <input type="radio" name="level" value="1"><img src="assets/nue/c2.png"/>
-        <input type="radio" name="level" value="2"><img src="assets/nue/c3.png"/>
-        <br>
-        <br>
-        <h2>Choose a drawing:</h2>
-        <button type="submit" class="buttonBlue" name="ficha" value="assets/sudoku0/"> <img src="assets/sudoku0/logo.png"/> </button>
-        <button type="submit" class="buttonBlue" name="ficha" value="assets/sudoku1/"> <img src="assets/sudoku1/logo.png"/> </button>
-        <button type="submit" class="buttonBlue" name="ficha" value="assets/sudoku2/"> <img src="assets/sudoku2/logo.png"/> </button>
-        <button type="submit" class="buttonBlue" name="ficha" value="assets/sudoku3/"> <img src="assets/sudoku3/logo.png"/> </button>
-        <button type="submit" class="buttonBlue" name="ficha" value="assets/sudoku6/"> <img src="assets/sudoku6/logo.png"/> </button>
-        <button type="submit" class="buttonBlue" name="ficha" value="assets/sudoku8/"> <img src="assets/sudoku8/logo.png"/> </button>
-      </form>
-    </div>
+    <br><br>
+    <form action="game.html" method="get">
+      <h2>Choose a level:</h2>
+      <input id="level1" type="radio" name="level" value="0" checked>
+        <label for="level1"><img src="assets/nue/c1.png"/></label>
+      <input id="level2" type="radio" name="level" value="1">
+        <label for="level2"><img src="assets/nue/c2.png"/></label>
+      <input id="level3" type="radio" name="level" value="2">
+        <label for="level3"><img src="assets/nue/c3.png"/></label>
+      <input id="level4" type="radio" name="level" value="3">
+        <label for="level4"><img src="assets/nue/c4.png"/></label>
+      <input id="level5" type="radio" name="level" value="4">
+        <label for="level5"><img src="assets/nue/c5.png"/></label>
+      <br>
+      <br>
+      <h2>Choose a drawing:</h2>
+      <input id="ficha2" type="radio" name="ficha" value="assets/sudoku2/" checked>
+        <label for="ficha2"><img src="assets/sudoku2/logo.png"/></label>
+      <input id="ficha1" type="radio" name="ficha" value="assets/sudoku1/">
+        <label for="ficha1"><img src="assets/sudoku1/logo.png"/></label>
+      <input id="ficha6" type="radio" name="ficha" value="assets/sudoku6/">
+        <label for="ficha6"><img src="assets/sudoku6/logo.png"/></label>
+      <input id="ficha3" type="radio" name="ficha" value="assets/sudoku3/">
+        <label for="ficha3"><img src="assets/sudoku3/logo.png"/></label>
+      <input id="ficha8" type="radio" name="ficha" value="assets/sudoku8/">
+        <label for="ficha8"><img src="assets/sudoku8/logo.png"/></label>
+      <input id="ficha0" type="radio" name="ficha" value="assets/sudoku0/">
+        <label for="ficha0"><img src="assets/sudoku0/logo.png"/></label>
+      <br>
+      <br>
+      <button type="submit"  class="buttonBlue">PLAY</button>
+    </form>
   </div>
-  
-  <script>
-    $('#options').hide()
-    options = function () {
-      $('#options').show()
-      $('#options').animate({
-        opacity: '1'
-      })
-    }
-  </script>
 </body>
 
 </html>

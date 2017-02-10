@@ -17,18 +17,13 @@ button img{
   width: 200px;
   height: 200px;
 }
-form button{
-  margin: 10px;
-  padding: 10px;
-  line-height: 0;
-}
 
 .block{
   background: rgb(230, 232, 252);
   border: 10px solid rgb(100, 80, 146);
   border-radius: 20px;
   padding: 20px;
-  margin: 100px;
+  margin: 10px 100px;
   transition: all 0.5s;
 }
 @media only screen and (max-width: 760px) {
@@ -49,13 +44,8 @@ form button{
 
 
 form > input{
-  /*visibility: hidden;*/
-  opacity: 0;
+  visibility: hidden;
   position: absolute;
-  width: 168px;
-  height: 168px;
-  margin-top: 20px;
-  cursor:pointer;
 }
 form > input + img{
   cursor:pointer;
@@ -65,13 +55,28 @@ form > input + img{
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
-  padding: 15px 30px;
+  padding: 15px;
   margin-top: 20px;
 }
-form > input:checked + img{
+form > label > img{
+  cursor:pointer;
+  border: 4px solid transparent;
+  width: 100px;
+  height: 130px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 15px;
+  margin-top: 20px;
+}
+form > input:checked + label > img{
   border:4px solid #2980B9;
 }
-
+input[name=ficha] + label >img {
+  padding: 15px;
+  width: 200px;
+  height: 200px;
+} 
 
 .Message {
   opacity: 0;
